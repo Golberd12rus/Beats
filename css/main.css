@@ -86,7 +86,7 @@ img {
   position: absolute;
   bottom: -30px;
   right: 10%;
-  content: url(../../img/hero/rectangle_hero.svg);
+  content: url("../../img/hero/rectangle_hero.svg");
 }
 
 .hero__title-section {
@@ -516,7 +516,7 @@ width: 247px;
 }
 
 .section__delivery {
-  background: url("./../../img/delivery/delivery_bg.svg") center center no-repeat;
+  background: url("../../../img/delivery/delivery_bg.svg") center center no-repeat;
 }
 
 .container__delivery {
