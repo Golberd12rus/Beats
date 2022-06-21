@@ -111,7 +111,7 @@ img {
 }
 
 .hero__container {
-  background: url("../../img/hero/headset.svg") right center/50% auto no-repeat;
+  background: url("../../../Beats/img/hero/headset.svg") right center/50% auto no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
