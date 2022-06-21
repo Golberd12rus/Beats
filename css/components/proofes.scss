@@ -1,0 +1,12 @@
+.proofes {
+  display: flex;
+}
+
+.proofes__item {
+  align-items: center;
+  margin-right: 12px;
+
+  :last-child {
+    margin-right: 0;
+  }
+}

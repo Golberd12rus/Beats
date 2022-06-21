@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  margin-right: 27px;
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+  font-family: 'Alegreya Sans';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.phone-number__icon {
+  margin-right: 6px;
+  width: 12px;
+  height: 12px;
+}
+
+.phone-number__text {
+  text-decoration: none;
+  font-size: 18px;
+
+}
+

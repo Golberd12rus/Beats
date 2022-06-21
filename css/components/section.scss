@@ -1,0 +1,34 @@
+.section {
+  position: relative;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 52px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--delivery {
+    margin-bottom: 58px;
+  }
+}
+
+.section__why {
+  position: relative;
+  &::before {
+    position: absolute;
+    bottom: -6px;
+    left: 5%;
+    content: url(../../img/why/why_bg_decor.svg);
+  }
+}
+
+.section__delivery {
+  color: #fff;
+}

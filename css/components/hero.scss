@@ -1,0 +1,46 @@
+.hero {
+
+  background-color: $bggrey;
+  height: 100vh;
+  min-height: 650px;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    bottom: -30px;
+    right: 10%;
+    content: url(../../img/hero/rectangle_hero.svg);
+  }
+}
+
+.hero__title-section {
+  width: 46%;
+}
+
+.hero__main-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero__disc-title {
+  font-family: 'Alegreya Sans';
+  font-weight: 400;
+  line-height: 25px;
+  font-size: 21px;
+  padding-right: 24%;
+  margin-bottom: 50px;
+}
+
+.hero__container {
+  background: url("../../img/hero/headset.svg") right center/50% auto no-repeat ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0px 70px;
+  height: 100%;
+  
+}
