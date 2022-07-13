@@ -99,7 +99,7 @@ img {
   position: absolute;
   bottom: -1.875rem;
   right: 10%;
-  content: url("./../../img/hero/rectangle_hero.svg");
+  content: url("../../../Beats/img/hero/rectangle_hero.svg");
 }
 
 .hero__title-section {
@@ -130,7 +130,7 @@ img {
   }
   .hero__title-section::before {
     content: "";
-    background: url("../../img/hero/headset.svg") center center/contain no-repeat;
+    background: url("../../../Beats/img/hero/headset.svg") center center/contain no-repeat;
     width: 21.875rem;
     height: 21.875rem;
     margin-bottom: 4.0625rem;
@@ -182,7 +182,7 @@ img {
 }
 
 .hero__container {
-  background: url("./../../img/hero/headset.svg") right bottom 25%/50% auto no-repeat;
+  background: url("../../../Beats/img/hero/headset.svg") right bottom 25%/50% auto no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,7 +481,7 @@ img {
   position: absolute;
   bottom: -0.375rem;
   left: 5%;
-  content: url("./../../img/why/why_bg_decor.svg");
+  content: url("../../../Beats/img/why/why_bg_decor.svg");
 }
 
 .section__delivery {
@@ -545,7 +545,7 @@ img {
   }
 }
 .benefits__item::before {
-  content: url("./../../img/why/bennefet_splitter.svg");
+  content: url("../../../Beats/img/why/bennefet_splitter.svg");
   position: absolute;
   top: 3.75rem;
   right: 0;
@@ -661,7 +661,7 @@ width: rem(247px);
   position: absolute;
   bottom: -0.375rem;
   left: 5%;
-  content: url("./../../img/reviews/reviews_bg.svg");
+  content: url("../../../Beats/img/reviews/reviews_bg.svg");
 }
 
 .container__reviews {
@@ -823,7 +823,7 @@ width: rem(247px);
 }
 
 .section__delivery {
-  background: url("./../../img/delivery/delivery_bg.svg") center center no-repeat;
+  background: url("../../../Beats/img/delivery/delivery_bg.svg") center center no-repeat;
 }
 
 .container__delivery {
@@ -970,7 +970,7 @@ width: rem(247px);
   border-radius: 0.25rem;
 }
 .radio--checkbox .radio__visible::before {
-  background: url("./../../img/delivery/form_checkmark.svg") center center no-repeat;
+  background: url("../../../Beats/img/delivery/form_checkmark.svg") center center no-repeat;
 }
 
 .radio__elem {

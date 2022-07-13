@@ -10,7 +10,7 @@
     position: absolute;
     bottom: rem(-30px);
     right: 10%;
-    content: url("./../../img/hero/rectangle_hero.svg");
+    content: url("../../../Beats/img/hero/rectangle_hero.svg");
   }
 }
 
@@ -30,7 +30,7 @@
 
     &::before {
       content: '';
-      background: url("../../img/hero/headset.svg") center center /contain no-repeat;
+      background: url("../../../Beats/img/hero/headset.svg") center center /contain no-repeat;
       width: rem(350px);
       height: rem(350px);
       margin-bottom: rem(65px);
@@ -79,7 +79,7 @@
 }
 
 .hero__container {
-  background: url("./../../img/hero/headset.svg") right bottom 25% /50% auto no-repeat ;
+  background: url("../../../Beats/img/hero/headset.svg") right bottom 25% /50% auto no-repeat ;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
