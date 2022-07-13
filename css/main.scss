@@ -1,4 +1,10 @@
 $containerWidth: 920px;
+$baseFontSize: 16px;
+
+//breakpoits
+
+$tablets: 768px;
+$phones: 480px;
 
 //colors
 $red: #E01F3D;
@@ -6,6 +12,8 @@ $grey: #F8FAF9;
 $bggrey: #F5F5F5;
 $black: #292929;
 $white: #FFFFFF;
+
+@import "./components/media.scss";
 
 //normalize
 @import "./normalize.css";
@@ -17,6 +25,7 @@ $white: #FFFFFF;
 //components
 @import "./components/hero.scss";
 @import "./components/header.scss";
+@import "./components/hamburger.scss";
 @import "./components/proofes.scss";
 @import "./components/proof.scss";
 @import "./components/btn.scss";
@@ -30,3 +39,6 @@ $white: #FFFFFF;
 @import "./components/form.scss";
 @import "./components/radio.scss";
 @import "./components/fixed-menu.scss";
+@import "./components/footer.scss";
+@import "./components/contacts.scss";
+@import "./components/social.scss";

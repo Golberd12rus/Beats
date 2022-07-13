@@ -1,12 +1,23 @@
+html {
+  font-size: $baseFontSize;
+
+  @include tablets {
+    font-size: $baseFontSize - 1px;
+  }
+
+  @include phones {
+    font-size: $baseFontSize - 2px;
+  }
+}
+
 html,
 body  {
   height: 100%;
 }
 
 body  {
-  font-size: 16px;
   font-family: "Play", Arial, Helvetica, sans-serif;
-  line-height: 19px;
+  line-height: rem(19px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -15,13 +26,13 @@ body  {
 .wrapper  {
   position: relative;
   width: 100%;
-  min-width: $containerWidth + 20px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container  {
-  width: $containerWidth;
+  width: 95%;
+  max-width: $containerWidth;
   margin: 0 auto;
 }
 

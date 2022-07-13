@@ -1,14 +1,27 @@
 @import "./normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Play:wght@400;700&display=swap");
+html {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-size: 16px;
   font-family: "Play", Arial, Helvetica, sans-serif;
-  line-height: 19px;
+  line-height: 1.1875rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -17,13 +30,13 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px;
   min-height: 100%;
   overflow: hidden;
 }
 
 .container {
-  width: 920px;
+  width: 95%;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -79,39 +92,97 @@ img {
 .hero {
   background-color: #F5F5F5;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   position: relative;
 }
 .hero::before {
   position: absolute;
-  bottom: -30px;
+  bottom: -1.875rem;
   right: 10%;
-  content: url("../../../Beats/img/hero/rectangle_hero.svg");
+  content: url("./../../img/hero/rectangle_hero.svg");
 }
 
 .hero__title-section {
   width: 46%;
 }
+@media screen and (max-width: 768px) {
+  .hero__title-section {
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    padding: 0 9%;
+    margin-bottom: 0.3125rem;
+  }
+  .hero__title-section::before {
+    content: "";
+    background: url("../../img/hero/headset.svg") center center/contain no-repeat;
+    width: 21.875rem;
+    height: 21.875rem;
+    margin-bottom: 4.0625rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  .hero__title-section::before {
+    width: 20.1875rem;
+    height: 20.1875rem;
+  }
+}
 
 .hero__main-title {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 52px;
+  font-size: 3rem;
+  line-height: 3.25rem;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
+}
+@media screen and (max-width: 480px) {
+  .hero__main-title {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    padding: 0 10%;
+  }
 }
 
 .hero__disc-title {
   font-family: "Alegreya Sans";
   font-weight: 400;
-  line-height: 25px;
-  font-size: 21px;
+  line-height: 1.5625rem;
+  font-size: 1.3125rem;
   padding-right: 24%;
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__disc-title {
+    padding-right: 0;
+    padding: 0 20%;
+    margin-bottom: 1.4375rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__disc-title {
+    padding: 0 13%;
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
 }
 
 .hero__container {
-  background: url("../../../Beats/img/hero/headset.svg") right center/50% auto no-repeat;
+  background: url("./../../img/hero/headset.svg") right bottom 25%/50% auto no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,17 +193,22 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 24px 0px 70px;
+  padding: 1.5rem 0rem 4.375rem;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .hero__container {
+    background: none;
+  }
 }
 
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -150,6 +226,18 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+}
+
+.beats__logo {
+  fill: #E01F3D;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .phone.header__phone {
+    display: none;
+  }
 }
 
 .menu__list {
@@ -159,10 +247,23 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 1.875rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 0.3125rem;
+}
+@media screen and (max-width: 768px) {
+  .menu__list {
+    display: none;
+  }
 }
 
 .menu__item {
-  margin-right: 27px;
+  margin-right: 1.6875rem;
+  margin-bottom: 0.625rem;
 }
 .menu__item :last-child {
   margin-right: 0;
@@ -172,11 +273,12 @@ img {
   text-decoration: none;
   font-family: "Alegreya Sans";
   font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 
 .phone {
@@ -187,17 +289,62 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  padding-top: 0.5625rem;
+}
+@media screen and (max-width: 480px) {
+  .phone {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.phone-number__icon {
-  margin-right: 6px;
-  width: 12px;
-  height: 12px;
+/*.phone-number__icon {
+  margin-right: rem(6px);
+  width: rem(12px);
+  height: rem(12px);
+  flex-shrink: 0;
+}*/
+.phone__icon {
+  fill: #292929;
+  margin-right: 0.375rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .phone-number__text {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
+  white-space: nowrap;
+}
+
+.hamburger {
+  width: 24px;
+  height: 20px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+.hamburger__plank {
+  display: block;
+  background: #292929;
+  height: 4px;
+  border-radius: 10px;
 }
 
 .proofes {
@@ -205,40 +352,64 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .proofes {
+    display: none;
+  }
+}
 
 .proofes__item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }
 .proofes__item :last-child {
   margin-right: 0;
+}
+
+.beats__ear {
+  fill: black;
+  height: 2.5625rem;
+  width: 2.5625rem;
+}
+
+.beats__battery {
+  fill: black;
+  width: 2.4375rem;
+  height: 2.4375rem;
+}
+
+.beats__plug {
+  fill: black;
+  width: 1.4375rem;
+  height: 2.4375rem;
 }
 
 .proof {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 164px;
+  min-width: 10.25rem;
 }
 
 .proof__icon {
-  width: 40px;
-  margin-right: 10px;
+  width: 2.5rem;
+  margin-right: 0.625rem;
 }
 
 .proof__text {
-  max-width: 114px;
+  max-width: 7.125rem;
 }
 
 .btn {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 18px 40px;
-  border-radius: 100px;
+  padding: 1.125rem 2.5rem;
+  border-radius: 6.25rem;
   border: none;
+  cursor: pointer;
 }
 .btn--theme--red {
   background: #E01F3D;
@@ -263,13 +434,13 @@ img {
 }
 .btn--reset {
   text-transform: none;
-  padding: 0 6px;
+  padding: 0 0.375rem;
 }
 
 .section {
   position: relative;
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,14 +454,24 @@ img {
 }
 
 .section__title {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 52px;
+  line-height: 3.25rem;
   text-align: center;
   text-transform: uppercase;
 }
 .section__title--delivery {
-  margin-bottom: 58px;
+  margin-bottom: 3.625rem;
+}
+@media screen and (max-width: 768px) {
+  .section__title--delivery {
+    margin-bottom: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section__title--reviews {
+    margin-bottom: 2.0625rem;
+  }
 }
 
 .section__why {
@@ -298,9 +479,9 @@ img {
 }
 .section__why::before {
   position: absolute;
-  bottom: -6px;
+  bottom: -0.375rem;
   left: 5%;
-  content: url("../../../Beats/img/why/why_bg_decor.svg");
+  content: url("./../../img/why/why_bg_decor.svg");
 }
 
 .section__delivery {
@@ -309,22 +490,43 @@ img {
 
 .headline {
   text-align: center;
-  margin-bottom: 62px;
+  margin-bottom: 3.875rem;
 }
 
 .headline__title {
-  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
   text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3.25rem;
+}
+@media screen and (max-width: 480px) {
+  .headline__title {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
 }
 
 .headline__title-disc {
   padding: 0 24%;
+}
+@media screen and (max-width: 480px) {
+  .headline__title-disc {
+    padding: 0 3.9%;
+  }
 }
 
 .benefits__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 480px) {
+  .benefits__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .benefits__item {
@@ -334,13 +536,26 @@ img {
   padding: 0 3%;
   position: relative;
 }
+@media screen and (max-width: 480px) {
+  .benefits__item {
+    padding: 0;
+    margin-bottom: 1.1875rem;
+    font-size: 1.1875rem;
+    margin-bottom: 1.9375rem;
+  }
+}
 .benefits__item::before {
-  content: url("../../../Beats/img/why/bennefet_splitter.svg");
+  content: url("./../../img/why/bennefet_splitter.svg");
   position: absolute;
-  top: 60px;
+  top: 3.75rem;
   right: 0;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+@media screen and (max-width: 768px) {
+  .benefits__item::before {
+    display: none;
+  }
 }
 .benefits__item:first-child {
   padding-left: 0;
@@ -355,21 +570,58 @@ img {
 .benefit {
   text-align: center;
 }
+@media screen and (max-width: 480px) {
+  .benefit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
+}
 
 .benefit__img-wrapper {
   display: inline-block;
-  height: 128px;
-  width: 128px;
+  height: 8rem;
+  width: 8rem;
   position: relative;
   background: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .benefit__img-wrapper {
+    margin-bottom: 0;
+    margin-right: 0.75rem;
+  }
 }
 
-.benefit__icon {
-  width: 55px;
-  height: 60px;
+.benefit__battery {
+  fill: black;
+  width: 3.75rem;
+  height: 3.75rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.benefit__speaker {
+  fill: black;
+  width: 3.3125rem;
+  height: 2.9375rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.benefit__timer {
+  fill: black;
+  width: 3.625rem;
+  height: 3.75rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -378,23 +630,38 @@ img {
 }
 
 .benefit__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  line-height: 28px;
-  margin-bottom: 7px;
+  line-height: 1.75rem;
+  margin-bottom: 0.4375rem;
+}
+
+@media screen and (max-width: 480px) {
+  .benefit__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 /*.benefit__desc {
-width: 247px;
+width: rem(247px);
 }*/
 .section__reviews {
   position: relative;
 }
 .section__reviews::before {
   position: absolute;
-  bottom: -6px;
+  bottom: -0.375rem;
   left: 5%;
-  content: url("../../../Beats/img/reviews/reviews_bg.svg");
+  content: url("./../../img/reviews/reviews_bg.svg");
 }
 
 .container__reviews {
@@ -403,34 +670,62 @@ width: 247px;
 
 .reviews__dispaly {
   background: #F8FAF9;
-  padding: 42px;
-  margin-bottom: 15px;
+  padding: 2.625rem;
+  margin-bottom: 0.9375rem;
   overflow: hidden;
   position: relative;
 }
 .reviews__dispaly::before {
   content: "";
   display: block;
-  width: 82px;
-  height: 82px;
+  width: 5.125rem;
+  height: 5.125rem;
   background: #FFFFFF;
   border-radius: 50%;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: -60px;
+  top: -3.75rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__dispaly {
+    margin-bottom: 2rem;
+  }
 }
 
 .reviews__display-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .reviews__display-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .reviews__avatar {
-  width: 253px;
-  height: 264px;
+  width: 15.8125rem;
+  height: 16.5rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__avatar {
+    width: 8.125rem;
+    height: 8.125rem;
+    margin-top: 1.3125rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .reviews__avatar-img {
@@ -444,7 +739,7 @@ width: 247px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-left: 40px;
+  margin-left: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,29 +747,41 @@ width: 247px;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    margin-left: 0;
+  }
+}
 
 .reviews__title {
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  margin-bottom: 27px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.6875rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__title {
+    margin-bottom: 1.125rem;
+  }
 }
 
 .reviews__text {
-  margin-bottom: 38px;
+  margin-bottom: 2.375rem;
+}
+@media screen and (max-width: 768px) {
+  .reviews__text {
+    margin-bottom: 1rem;
+  }
 }
 
 .reviews__author {
   font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
 }
 
 .reviews__sitcher-list {
@@ -487,15 +794,15 @@ width: 247px;
 }
 
 .interective-avatar {
-  width: 74px;
-  height: 74px;
-  border: 4px solid transparent;
+  width: 4.625rem;
+  height: 4.625rem;
+  border: 0.25rem solid transparent;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
 }
 .interective-avatar--active {
-  border: 4px solid #E01F3D;
+  border: 0.25rem solid #E01F3D;
 }
 
 .interective-avatar__link {
@@ -516,11 +823,18 @@ width: 247px;
 }
 
 .section__delivery {
-  background: url("../../../Beats/img/delivery/delivery_bg.svg") center center no-repeat;
+  background: url("./../../img/delivery/delivery_bg.svg") center center no-repeat;
 }
 
 .container__delivery {
-  width: 937px;
+  max-width: 58.5625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form {
@@ -528,53 +842,83 @@ width: 247px;
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 0;
+  }
+}
 
 .form__col {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 27px;
+  margin-right: 1.6875rem;
 }
 .form__col:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .form__col {
+    margin-right: 0;
+  }
 }
 
 .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 11px;
+  margin-bottom: 0.6875rem;
 }
 
 .form__block {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 15px;
+  margin-right: 0.9375rem;
 }
 .form__block:last-child {
   margin-right: 0;
 }
 
 .form__title {
-  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
 }
 
 .form__input {
   width: 100%;
   border: none;
-  padding: 17px 12px;
-  border: 3px solid transparent;
-  border-radius: 4px;
+  padding: 1.0625rem 0.75rem;
+  border: 0.1875rem solid transparent;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
 }
 .form__input:focus {
   border-color: #E01F3D;
   outline: none;
 }
 .form__input--textarea {
-  height: 150px;
+  height: 9.375rem;
   resize: none;
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+}
+@media screen and (max-width: 768px) {
+  .form__input--textarea {
+    height: 5.125rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form__input {
+    padding: 0.5rem 0.625rem;
+  }
 }
 
 .form__controls {
@@ -585,7 +929,26 @@ width: 247px;
       flex-wrap: wrap;
 }
 .form__controls--last__row {
-  margin-bottom: 46px;
+  margin-bottom: 2.875rem;
+}
+@media screen and (max-width: 480px) {
+  .form__controls {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+}
+
+.form__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .radio {
@@ -597,17 +960,17 @@ width: 247px;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  margin-bottom: 20px;
-  margin-right: 16px;
-}
-.radio:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
+  margin-right: 1rem;
+  /*&:last-child {
+    margin-bottom: 0;
+  }*/
 }
 .radio--checkbox .radio__visible {
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 .radio--checkbox .radio__visible::before {
-  background: url("../../../Beats/img/delivery/form_checkmark.svg") center center no-repeat;
+  background: url("./../../img/delivery/form_checkmark.svg") center center no-repeat;
 }
 
 .radio__elem {
@@ -618,18 +981,18 @@ width: 247px;
 }
 
 .radio__visible {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   position: relative;
   border-radius: 50%;
   background: #fff;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .radio__visible::before {
   content: "";
   display: none;
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
   background: #E01F3D;
   border-radius: 50%;
   position: absolute;
@@ -646,7 +1009,7 @@ width: 247px;
 }
 
 .fixed-menu__item {
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 .fixed-menu__item--active .fixed-menu__link {
   border-color: #E01F3D;
@@ -656,17 +1019,17 @@ width: 247px;
 }
 
 .fixed-menu__link {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   display: block;
   position: relative;
 }
 .fixed-menu__link::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: 50%;
   background: #292929;
   position: absolute;
@@ -674,4 +1037,105 @@ width: 247px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 13%;
+}
+
+.footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.25rem 0 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-media__logo {
+  fill: #B3B3B3;
+  width: 1.875rem;
+  height: 1.875rem;
+  cursor: pointer;
+}
+.footer-media__logo:hover {
+  fill: black;
+}
+
+.contacts {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+  .contacts {
+    margin-bottom: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.phone-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+.phone-number__text {
+  text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .phone-number {
+    margin-top: 1.25rem;
+  }
+}
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-item {
+  margin-right: 0.625rem;
+}
+.social-item:last-child {
+  margin-right: 0;
+}
+
+.social-item__icon {
+  width: 1.875rem;
+  height: 1.875rem;
 }

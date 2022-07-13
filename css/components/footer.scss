@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  height: 13%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: rem(20px) 0 rem(20px);
+
+  @include phones {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+  .footer-media__logo {
+    fill: #B3B3B3;
+    width: rem(30px);
+    height: rem(30px);
+    cursor: pointer;
+
+    &:hover {
+      fill: black;
+    }
+  }

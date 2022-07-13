@@ -2,9 +2,10 @@
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 18px 40px;
-  border-radius: 100px;
+  padding: rem(18px) rem(40px);
+  border-radius: rem(100px);
   border: none;
+  cursor: pointer ;
 
     &--theme--red {
       background: $red;
@@ -39,6 +40,6 @@
 
     &--reset {
       text-transform: none;
-      padding: 0 6px;
+      padding: 0 rem(6px);
     }
 }

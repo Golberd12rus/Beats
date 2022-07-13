@@ -1,21 +1,31 @@
 .section {
   position: relative;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .section__title {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: 700;
-  line-height: 52px;
+  line-height: rem(52px);
   text-align: center;
   text-transform: uppercase;
 
   &--delivery {
-    margin-bottom: 58px;
+    margin-bottom: rem(58px);
+
+    @include tablets {
+      margin-bottom: rem(30px);
+    }
+  }
+
+  &--reviews {
+    @include tablets {
+      margin-bottom: rem(33px);
+    }
   }
 }
 
@@ -23,12 +33,14 @@
   position: relative;
   &::before {
     position: absolute;
-    bottom: -6px;
+    bottom: rem(-6px);
     left: 5%;
-    content: url("../../../Beats/img/why/why_bg_decor.svg");
+    content: url("./../../img/why/why_bg_decor.svg");
   }
+
 }
 
 .section__delivery {
   color: #fff;
+
 }
