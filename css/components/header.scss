@@ -23,37 +23,7 @@
   }
 }
 
-.menu__list {
-  display: flex;
-  align-items: center;
-  margin: 0 rem(30px);
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: rem(5px);
 
-  @include tablets {
-    display: none;
-  }
-}
-
-.menu__item {
-  margin-right: rem(27px);
-  margin-bottom: rem(10px);
-
-  :last-child {
-    margin-right: 0;
-  }
-}
-
-.menu__link {
-  text-decoration: none;
-  font-family: 'Alegreya Sans';
-  font-weight: 400;
-  font-size: rem(18px);
-  line-height: rem(30px);
-  align-items: center;
-  white-space: nowrap;
-}
 
 .phone {
   display: flex;

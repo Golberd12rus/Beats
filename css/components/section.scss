@@ -29,6 +29,10 @@
   }
 }
 
+.section__product {
+  background: #F8FAF9;
+}
+
 .section__why {
   position: relative;
   &::before {
@@ -39,6 +43,7 @@
   }
 
 }
+
 
 .section__delivery {
   color: #fff;

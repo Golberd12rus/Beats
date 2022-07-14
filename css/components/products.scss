@@ -1,0 +1,27 @@
+.products-slider {
+  display: flex;
+}
+
+.products-slider__arrow {
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  margin: auto;
+  font-size: rem(50px);
+
+   &--prew {
+    text-decoration: none;
+    margin-right: rem(10px);
+   }
+
+   &--next {
+    text-decoration: none;
+    margin-left: rem(10px);
+   }
+}
+
+.products {
+  display: flex;
+  max-width: rem(930px);
+}
