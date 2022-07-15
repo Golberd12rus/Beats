@@ -3,6 +3,19 @@
   justify-content: center;
 }
 
+.reviews__switcher-item {
+  width: rem(74px);
+  height: rem(74px);
+  border: rem(4px) solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+
+  &.active {
+    border: rem(4px) solid #E01F3D;
+  }
+}
+
 .interective-avatar {
   width: rem(74px);
   height: rem(74px);
@@ -11,7 +24,7 @@
   overflow: hidden;
   position: relative;
 
-  &--active {
+  & .active {
     border: rem(4px) solid #E01F3D;
   }
 }

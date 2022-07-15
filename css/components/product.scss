@@ -19,8 +19,19 @@
 
   @include tablets {
     margin-right: 0;
+    width: rem(306px);
+    height: rem(306px);
     margin-bottom: rem(50px);
   }
+
+  @include phones {
+    width: rem(306px);
+    height: rem(306px);
+  }
+}
+
+.product__pic {
+  width: 100%;
 }
 
 .product-item__content {

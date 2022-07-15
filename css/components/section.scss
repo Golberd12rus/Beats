@@ -14,6 +14,10 @@
   text-align: center;
   text-transform: uppercase;
 
+  @include phones {
+    font-size: rem(32px);
+  }
+
   &--delivery {
     margin-bottom: rem(58px);
 
@@ -33,6 +37,10 @@
   background: #F8FAF9;
 }
 
+.section__team {
+  background: #fff;
+}
+
 .section__why {
   position: relative;
   &::before {
@@ -46,6 +54,12 @@
 
 
 .section__delivery {
+  background: url("../../../Beats/img/delivery/delivery_bg.svg") center center / cover no-repeat;
   color: #fff;
+}
 
+.section__map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

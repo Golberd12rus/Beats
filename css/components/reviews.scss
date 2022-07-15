@@ -37,6 +37,28 @@
   }
 }
 
+.reviews__list {
+  position: relative;
+  min-height: rem(300px);
+}
+
+.reviews__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  transition: 0.1s;
+  opacity: 0;
+
+  &.active{
+    position: static;
+    opacity: 1;
+    pointer-events: unset;
+  }
+}
+
 .reviews__display-inner {
   display: flex;
   align-items: flex-start;

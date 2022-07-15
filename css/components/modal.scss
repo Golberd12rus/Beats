@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  top: 30%;
+  width: 100%;
+  background: rgb(33, 35, 37, 0);
+  display: none;
+}
+
+.modal__container {
+
+  height: rem(176px);
+  width: rem(310px);
+  background: #FFFFFF;
+  text-align: center;
+  margin: auto;
+}
+
+.modal__content {
+  margin-bottom: rem(17px);
+  color: #000;
+  padding-top: rem(34px);
+}
+
+.modal__content.modal-error {
+  color: red;
+  padding-top: rem(20px);
+  padding-inline: rem(20px);
+}
+
+.fancybox-button {
+  display: none;
+}
+
+.fancybox-content {
+  padding: 0 !important;
+}
+
+.modal-error {
+  color: red;
+}

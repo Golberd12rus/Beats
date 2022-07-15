@@ -1,27 +1,64 @@
 .products-slider {
   display: flex;
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
 }
 
+
 .products-slider__arrow {
-  height: 100%;
+  /*height: 100%;
   justify-content: center;
   display: flex;
   position: relative;
-  margin: auto;
-  font-size: rem(50px);
+  margin: auto;*/
+  top: 50%;
+  position: absolute;
 
-   &--prew {
-    text-decoration: none;
-    margin-right: rem(10px);
+  @include tablets {
+    top: rem(330px);
    }
+
+   @include phones {
+    top: rem(216px); 
+  }
+    &--prew {
+        left: rem(20px);
+        
+        @include tablets {
+            // left: rem(100px);
+            left: 10%;
+        }
+        @include phones {
+            left: 5%;
+            top: 35%;
+        }
+    }
 
    &--next {
-    text-decoration: none;
-    margin-left: rem(10px);
+    right: rem(50px);
+    @include tablets {
+     // right: rem(100px);
+     right: 10%;
+     }
+
+     @include phones {
+      right: 5%;
+      top: 35%;
+    }
+
    }
 }
 
-.products {
+.products-slider__link {
+  text-decoration: none;
+  font-size: rem(50px);
+}
+
+/*.products {
   display: flex;
   max-width: rem(930px);
-}
+}*/

@@ -10,7 +10,7 @@
   line-height: rem(52px);
 
   @include phones {
-    font-size: rem($baseFontSize) + rem(16px) + 0.25rem;
+    font-size: rem(32px);
     line-height: rem(36px);
   }
 }

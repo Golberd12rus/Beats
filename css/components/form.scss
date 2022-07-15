@@ -50,7 +50,10 @@
   border: rem(3px) solid transparent;
   border-radius: rem(4px);
   font-size: rem($baseFontSize) - rem(2px);
-
+  
+  &.form__input-error {
+    border-color: #E01F3D;
+  }
   &:focus {
     border-color: #E01F3D;
     outline: none;
@@ -88,5 +91,9 @@
 
 .form__btns {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+
+  @include tablets {
+    justify-content: center;
+  }
 }
