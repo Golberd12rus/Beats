@@ -10,44 +10,35 @@
 
 
 .products-slider__arrow {
-  /*height: 100%;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  margin: auto;*/
   top: 50%;
   position: absolute;
 
   @include tablets {
-    top: rem(330px);
+    top: rem(290px);
    }
 
    @include phones {
-    top: rem(216px); 
+    top: rem(180px); 
   }
     &--prew {
         left: rem(20px);
         
         @include tablets {
-            // left: rem(100px);
             left: 10%;
         }
         @include phones {
             left: 5%;
-            top: 35%;
         }
     }
 
    &--next {
     right: rem(50px);
     @include tablets {
-     // right: rem(100px);
      right: 10%;
      }
 
      @include phones {
       right: 5%;
-      top: 35%;
     }
 
    }

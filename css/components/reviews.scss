@@ -1,13 +1,3 @@
-.section__reviews {
-    position: relative;
-    &::before {
-      position: absolute;
-      bottom: rem(-6px);
-      left: 5%;
-      content: url("../../../Beats/img/reviews/reviews_bg.svg");
-    }
-}
-
 .container__reviews {
   background: #FFFFFF;
 }

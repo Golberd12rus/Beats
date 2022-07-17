@@ -45,11 +45,42 @@
   position: relative;
   &::before {
     position: absolute;
-    bottom: rem(-6px);
+    bottom: rem(-18px);
     left: 5%;
+    z-index: 1;
     content: url("../../../Beats/img/why/why_bg_decor.svg");
   }
 
+}
+
+.section__product {
+  &::before {
+    position: absolute;
+    bottom: rem(-18px);
+    right: 5%;
+    z-index: 1;
+    content: url("../../../Beats/img/product/quadro.svg");
+  }
+}
+
+.section__reviews {
+  &::before {
+    position: absolute;
+    bottom: rem(-22px);
+    left: 5%;
+    z-index: 1;
+    content: url("../../../Beats/img/reviews/ellipse.svg");
+  }
+}
+
+.player-section {
+  &::before {
+    position: absolute;
+    bottom: rem(-30px);
+    right: 5%;
+    z-index: 1;
+    content: url("../../../Beats/img/player/polygon.svg");
+  }
 }
 
 

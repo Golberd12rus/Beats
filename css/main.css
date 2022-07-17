@@ -25,8 +25,17 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform;
 }
 
 .container {
@@ -91,7 +100,7 @@ img {
   position: absolute;
   bottom: -1.875rem;
   right: 10%;
-  content: url("../../../Beats/hero/rectangle_hero.svg");
+  content: url("../../../Beats/img/hero/rectangle_hero.svg");
 }
 
 .hero__title-section {
@@ -443,9 +452,34 @@ img {
 }
 .section__why::before {
   position: absolute;
-  bottom: -0.375rem;
+  bottom: -1.125rem;
   left: 5%;
+  z-index: 1;
   content: url("../../../Beats/img/why/why_bg_decor.svg");
+}
+
+.section__product::before {
+  position: absolute;
+  bottom: -1.125rem;
+  right: 5%;
+  z-index: 1;
+  content: url("../../../Beats/img/product/quadro.svg");
+}
+
+.section__reviews::before {
+  position: absolute;
+  bottom: -1.375rem;
+  left: 5%;
+  z-index: 1;
+  content: url("../../../Beats/img/reviews/ellipse.svg");
+}
+
+.player-section::before {
+  position: absolute;
+  bottom: -1.875rem;
+  right: 5%;
+  z-index: 1;
+  content: url("../../../Beats/img/player/polygon.svg");
 }
 
 .section__delivery {
@@ -625,16 +659,6 @@ img {
 /*.benefit__desc {
 width: rem(247px);
 }*/
-.section__reviews {
-  position: relative;
-}
-.section__reviews::before {
-  position: absolute;
-  bottom: -0.375rem;
-  left: 5%;
-  content: url("../../../Beats/img/reviews/reviews_bg.svg");
-}
-
 .container__reviews {
   background: #FFFFFF;
 }
@@ -1273,22 +1297,17 @@ width: rem(247px);
 }
 
 .products-slider__arrow {
-  /*height: 100%;
-  justify-content: center;
-  display: flex;
-  position: relative;
-  margin: auto;*/
   top: 50%;
   position: absolute;
 }
 @media screen and (max-width: 768px) {
   .products-slider__arrow {
-    top: 20.625rem;
+    top: 18.125rem;
   }
 }
 @media screen and (max-width: 480px) {
   .products-slider__arrow {
-    top: 13.5rem;
+    top: 11.25rem;
   }
 }
 .products-slider__arrow--prew {
@@ -1302,7 +1321,6 @@ width: rem(247px);
 @media screen and (max-width: 480px) {
   .products-slider__arrow--prew {
     left: 5%;
-    top: 35%;
   }
 }
 .products-slider__arrow--next {
@@ -1316,7 +1334,6 @@ width: rem(247px);
 @media screen and (max-width: 480px) {
   .products-slider__arrow--next {
     right: 5%;
-    top: 35%;
   }
 }
 
@@ -1754,4 +1771,350 @@ width: rem(247px);
 
 .modal-error {
   color: red;
+}
+
+.products-color-section {
+  background: url("../../../Beats/img/acco-color/acco-color_bg.jpg") center center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.products-color {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.products-color-section__title {
+  text-align: left;
+  color: #fff;
+  margin-bottom: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+@media screen and (max-width: 768px) {
+  .products-color-section__title {
+    margin-left: 3%;
+  }
+}
+
+.products-color__content {
+  background: rgba(51, 53, 55, 0.9);
+  width: 0px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
+}
+
+.products-color__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.products-color__title {
+  position: relative;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  cursor: pointer;
+}
+.products-color__title.products-color__title-bg-one {
+  background: #999;
+}
+.products-color__title.products-color__title-bg-two {
+  background: #151515;
+}
+.products-color__title.products-color__title-bg-three {
+  background: #E01F3C;
+}
+
+.products-color__text {
+  padding: 7.75rem 0px;
+  width: 7.5625rem;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+@media screen and (max-width: 480px) {
+  .products-color__text {
+    width: 5.625rem;
+  }
+}
+
+.products-color__text-block {
+  -webkit-transform: rotateZ(-90deg);
+          transform: rotateZ(-90deg);
+  font-size: 3rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.products-color__close {
+  width: 1.25rem;
+  height: 1.25rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+  margin-left: auto;
+  display: block;
+  margin-right: 1.875rem;
+  margin-top: 1.875rem;
+  cursor: pointer;
+}
+.products-color__close:hover {
+  color: #E01F3D;
+}
+
+.products-color__content-text {
+  color: #fff;
+  padding: 2.1875rem;
+}
+@media screen and (max-width: 480px) {
+  .products-color__content-text {
+    padding: 1.25rem;
+  }
+}
+
+.player-section {
+  background: #F8FAF9;
+  text-align: center;
+}
+
+.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.player.paused {
+  background: url("../../../Beats/img/player/player-bg.jpg") center center no-repeat;
+}
+.player.active .player__splash {
+  display: none;
+}
+.player.paused .player__start {
+  background: url("../../../Beats/img/player/player_control-pause.svg") center center no-repeat;
+}
+.player.mute .player__speaker {
+  background: url("../../../Beats/img/player/player_valume.svg") center center/cover no-repeat;
+}
+
+.player-section__title {
+  margin-bottom: 1.5625rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 3.25rem;
+  margin-bottom: 2.75rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.player-section__container {
+  width: 41.375rem;
+  height: 24.5rem;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .player-section__container {
+    width: 37.125rem;
+    height: 22rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player-section__container {
+    width: 24.625rem;
+    height: 14.625rem;
+  }
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../../../Beats/img/player/player_btn-play.svg") center center no-repeat, url("../../../Beats/img/player/player-bg.jpg") center center/cover no-repeat;
+  cursor: pointer;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #404040;
+  width: 41.375rem;
+  height: 2.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1.5625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .player__controls {
+    width: 37.125rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__controls {
+    width: 24.625rem;
+    height: 1.4375rem;
+    padding: 0 0.8125rem;
+  }
+}
+
+.player__start,
+.player__playback-button,
+.player__speaker,
+.player__volume-button {
+  background: transparent;
+  border: transparent;
+  text-transform: none;
+}
+
+.player__start {
+  background: url("../../../Beats/img/player/player_btn-play.svg") center center/cover no-repeat;
+  width: 0.625rem;
+  height: 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .player__start {
+    width: 0.4375rem;
+    height: 1rem;
+  }
+}
+
+.player__playback {
+  width: 27.875rem;
+  height: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.player__playback::before {
+  content: "";
+  height: 0.3125rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+  .player__playback {
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__playback {
+    width: 16.625rem;
+  }
+}
+
+.player__playback-button {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: url("../../../Beats/img/player/Player_control-pointer.svg") center center no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .player__playback-button {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__playback-button {
+    width: 0.5rem;
+    height: 0.6875rem;
+  }
+}
+
+.player__speaker {
+  background: url("../../../Beats/img/player/player_valume.svg") center center no-repeat;
+  width: 0.625rem;
+  height: 1.25rem;
+}
+@media screen and (max-width: 480px) {
+  .player__speaker {
+    width: 0.4375rem;
+    height: 0.9375rem;
+  }
+}
+
+.player__volume {
+  width: 3.625rem;
+  height: 0.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.player__volume::before {
+  content: "";
+  height: 0.3125rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #626262;
+  background: #E01F3D;
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (max-width: 480px) {
+  .player__volume {
+    width: 2.25rem;
+  }
+}
+
+.player__volume-button {
+  position: absolute;
+  width: 1rem;
+  left: 100%;
+  height: 1rem;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  background: url("../../../Beats/img/player/Player_control-pointer.svg") center center no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .player__volume-button {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__volume-button {
+    width: 0.5rem;
+    height: 0.6875rem;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
