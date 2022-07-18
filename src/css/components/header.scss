@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.beats__logo {
+  fill: #E01F3D;
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.phone.header__phone {
+  @include tablets {
+    display: none;
+  }
+}
+
+
+
+.phone {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding-top: rem(9px);
+
+  @include phones {
+    justify-content: center;
+  }
+}
+
+/*.phone-number__icon {
+  margin-right: rem(6px);
+  width: rem(12px);
+  height: rem(12px);
+  flex-shrink: 0;
+}*/
+.phone__icon {
+  fill: #292929;
+  margin-right: rem(6px);
+  width: rem(14px);
+  height: rem(14px);
+  flex-shrink: 0;
+}
+
+.phone-number__text {
+  text-decoration: none;
+  font-size: rem(18px);
+  white-space: nowrap;
+}
+

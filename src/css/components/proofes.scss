@@ -1,0 +1,34 @@
+.proofes {
+  display: flex;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.proofes__item {
+  align-items: center;
+  margin-right: rem(12px);
+
+  :last-child {
+    margin-right: 0;
+  }
+}
+
+.beats__ear {
+  fill: black;
+  height: rem(41px);
+  width: rem(41px);
+}
+
+.beats__battery {
+  fill: black;
+  width: rem(39px);
+  height: rem(39px);
+}
+
+.beats__plug {
+  fill: black;
+  width: rem(23px);
+  height: rem(39px);
+}

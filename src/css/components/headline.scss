@@ -1,0 +1,25 @@
+.headline {
+  text-align: center;
+  margin-bottom: rem(62px);
+}
+
+.headline__title {
+  margin-bottom: rem(18px);
+  text-transform: uppercase;
+  font-size: rem($baseFontSize) + rem(32px);
+  line-height: rem(52px);
+
+  @include phones {
+    font-size: rem(32px);
+    line-height: rem(36px);
+  }
+}
+
+
+.headline__title-disc {
+  padding: 0 24%;
+
+  @include phones {
+    padding: 0 3.9%;
+  }
+}

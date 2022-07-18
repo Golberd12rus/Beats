@@ -1,0 +1,55 @@
+.products-slider {
+  display: flex;
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+
+.products-slider__arrow {
+  top: 50%;
+  position: absolute;
+
+  @include tablets {
+    top: rem(290px);
+   }
+
+   @include phones {
+    top: rem(180px); 
+  }
+    &--prew {
+        left: rem(20px);
+        
+        @include tablets {
+            left: 10%;
+        }
+        @include phones {
+            left: 5%;
+        }
+    }
+
+   &--next {
+    right: rem(50px);
+    @include tablets {
+     right: 10%;
+     }
+
+     @include phones {
+      right: 5%;
+    }
+
+   }
+}
+
+.products-slider__link {
+  text-decoration: none;
+  font-size: rem(50px);
+}
+
+/*.products {
+  display: flex;
+  max-width: rem(930px);
+}*/

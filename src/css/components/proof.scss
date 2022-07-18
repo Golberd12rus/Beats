@@ -1,0 +1,13 @@
+.proof {
+  display: flex;
+  min-width: rem(164px);
+}
+
+.proof__icon {
+  width: rem(40px);
+  margin-right: rem(10px);
+}
+
+.proof__text {
+  max-width: rem(114px);
+}

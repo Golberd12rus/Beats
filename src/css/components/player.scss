@@ -1,0 +1,416 @@
+.player-section {
+  background: #F8FAF9;
+  text-align: center;
+}
+
+/*.player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &.paused {
+      background: url("../../../Beats/img/player/player-bg.jpg") center center no-repeat;
+  }
+
+  &.active .player__splash {
+      display: none;
+  }
+
+  &.paused .player__start {
+      background: url("../../../Beats/img/player/player_control-pause.svg") center center no-repeat;
+  }
+
+  &.mute .player__speaker {
+      background: url("../../../Beats/img/player/player_valume.svg") center center/cover no-repeat;   
+  }
+}*/
+
+
+.player-section__title {
+  margin-bottom: rem(25px);
+  text-transform: uppercase;
+  font-size: rem(48px);
+  line-height: rem(52px);
+  margin-bottom: rem(44px);
+  font-weight: bold;
+  color: #000;
+}
+
+/*.player-section__container {
+  width: rem(662px);
+  height: rem(392px);
+  margin: auto;
+
+  @include tablets {
+      width: rem(594px);
+      height: rem(352px);
+  }
+
+  @include phones {
+      width: rem(394px);
+      height: rem(234px);
+  }
+}
+
+.player__splash {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../../../Beats/img/player/player_btn-play.svg") center center  no-repeat, url("../../../Beats/img/player/player-bg.jpg") center center /cover  no-repeat;
+  cursor: pointer;
+}
+
+.player__controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #404040;
+  width: rem(662px);
+  height: rem(35px);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 rem(25px);
+  align-items: center;
+
+  @include tablets {
+      width: rem(594px);
+  }
+
+  @include phones {
+      width: rem(394px);
+      height: rem(23px);
+      padding: 0 rem(13px);
+  }
+}
+
+.player__start, 
+.player__playback-button,
+.player__speaker, 
+.player__volume-button {
+  background: transparent;
+  border: transparent;
+  text-transform: none;
+}
+
+.player__start {
+  background: url("../../../Beats/img/player/player_btn-play.svg") center center /cover no-repeat;
+  width: rem(10px);
+  height: rem(20px);
+
+  @include phones {
+      width: rem(7px);
+      height: rem(16px);
+  }
+}
+
+.player__playback {
+  width: rem(446px);
+  height: rem(5px);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+      content: "";
+      height: rem(5px);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      background: #626262;
+      //background: $red;
+      display: block;
+      transform: translateY(-50%);
+  }
+
+  @include tablets {
+      width: rem(400px);
+  }
+
+  @include phones {
+      width: rem(266px);
+  }
+}
+
+.player__playback-button {
+  position: absolute;
+  width: rem(16px);
+  height: rem(16px);
+  transform: translate( -50%);
+  background: url("../../../Beats/img/player/Player_control-pointer.svg") center center no-repeat;
+
+  @include tablets {
+      width: rem(12px);
+      height: rem(12px);
+  }
+
+  @include phones {
+      width: rem(8px);
+      height: rem(11px);
+  }
+}
+
+.player__speaker {
+  background: url("../../../Beats/img/player/player_valume.svg") center center no-repeat;
+  width: rem(10px);
+  height: rem(20px);
+
+  @include phones {
+      width: rem(7px);
+      height: rem(15px);
+  }
+}
+
+.player__volume {
+  width: rem(58px);
+  height: rem(5px);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+      content: "";
+      height: rem(5px);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      background: #626262;
+      background: $red;
+      display: block;
+      transform: translateY(-50%);
+  }
+
+
+  @include phones {
+      width: rem(36px);
+  }
+}
+
+.player__volume-button {
+  position: absolute;
+  width: rem(16px);
+  left: 100%;
+  height: rem(16px);
+  transform: translate( -50%);
+  background: url("../../../Beats/img/player/Player_control-pointer.svg") center center no-repeat;
+
+  @include tablets {
+      width: rem(12px);
+      height: rem(12px);
+  }
+
+  @include phones {
+      width: rem(8px);
+      height: rem(11px);
+  }
+}*/
+
+.player{
+  background: #F8FAF9;
+}
+
+.player-section__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.player__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: rem(662px);
+  height: rem(391px);
+
+  @include tablets {
+    width: rem(594px);
+    height: rem(351px);
+  }
+
+  @include phones {
+    width: 80%;
+    height: rem(233px);
+  }
+}
+
+.player__video {
+  position: relative;
+  width: 100%;
+}
+
+.player__video-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 82px;
+  height: 118px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.player__btn-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.player__video-img--active {
+  opacity: 0;
+}
+
+#player {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.player__toolbar {
+  width: 100%;
+  height: 35px;
+  background-color: #3e3e3e;
+  display: flex;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: rem(20px);
+}
+
+.duration__btn-wrap {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.duration__img {
+  margin-right: rem(4px);
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  border: 11px solid transparent;
+  border-left-color: #fff;
+  border-right-width: 0;
+  background: transparent;
+  outline: none;
+  transition: all 0.1s ease-out;
+
+  &.active {
+    border: 7px solid #fff;
+    height: 20px;
+    border-top: 0;
+    border-bottom: 0;
+    padding: 1px;
+  }
+}
+
+.duration__length-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.duration__length {
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, $red 0%, $red 0%, #626262 0%);
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.duration__length__other {
+  width: 50px;
+  height: 4px;
+}
+
+.duration__length::-webkit-slider-runnable-track {
+  color: #141205;
+  -webkit-appearance: none;
+}
+
+.duration__length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: $red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.duration__length::-webkit-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: $red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.sound {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  position: relative;
+  &::before {
+    content: '';
+    width: 29px;
+    height: 3px;
+    background-color: $red;
+    position: absolute;
+    display: block;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%) rotate(42deg);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.sound__btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.sound__mic {
+  cursor: pointer;
+  height: 20px;
+  width: 36px;
+}
+
+.sdound__volume {
+  margin-left: 10px;
+  margin-top: -5px;
+}
+
+
+
+
+
+
+
+
+

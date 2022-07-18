@@ -1,0 +1,43 @@
+.benefits__list {
+  display: flex;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+
+  @include phones {
+    padding: 0;
+    margin-bottom: rem(19px);
+    //font-size: rem($baseFontSize) + rem(3px);
+    margin-bottom: rem(31px);
+  }
+
+  &::before {
+    content: url("../../../Beats/img/why/bennefet_splitter.svg");
+    position: absolute;
+    top: rem(60px);
+    right: 0;
+    transform: translateX(50%);
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

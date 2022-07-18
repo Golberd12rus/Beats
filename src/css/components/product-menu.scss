@@ -1,0 +1,100 @@
+.products-color-section {
+  background: url('../../../Beats/img/acco-color/acco-color_bg.jpg') center center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.products-color {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.products-color-section__title {
+  text-align: left;
+  color: #fff;
+  margin-bottom: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+
+  @include tablets {
+      margin-left: 3%;
+  }
+}
+
+.products-color__content {
+  background: rgba(51, 53, 55, 0.9);
+  width: 0px;
+  position: relative;
+  overflow: hidden;
+  transition: width .7s;
+}
+.products-color__item {
+  display: flex;
+  height: 100vh;
+}
+
+.products-color__title {
+  position: relative;
+  display: inline-grid;
+  cursor: pointer;
+
+  &.products-color__title-bg-one {
+      background: #999;
+  }
+
+  &.products-color__title-bg-two {
+      background: #151515;
+  }
+  
+  &.products-color__title-bg-three {
+      background: #E01F3C;
+  }
+}
+
+
+.products-color__text {
+  padding: rem(124px) 0px;
+  width: rem(121px);
+  margin-bottom: 0;
+  margin-top: auto;
+
+  @include phones {
+      width: rem(90px);
+  }
+}
+
+.products-color__text-block {
+  transform: rotateZ(-90deg);
+  font-size: rem(48px);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.products-color__close {
+      width: rem(20px);
+      height: rem(20px);
+      text-transform: uppercase;
+      color: #fff;
+      font-size: rem(32px);
+      margin-left: auto;
+      display: block;
+      margin-right: rem(30px);
+      margin-top: rem(30px);
+      cursor: pointer;
+
+      &:hover {
+        color: $red;
+      }
+}
+
+.products-color__content-text {
+  color: #fff;
+  padding: rem(35px);
+
+  @include phones {
+      padding: rem(20px);
+  }
+}

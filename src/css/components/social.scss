@@ -1,0 +1,17 @@
+.social-list {
+  display: flex;
+  align-items: center;
+}
+
+.social-item {
+  margin-right: rem(10px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-item__icon {
+  width: rem(30px);
+  height: rem(30px);
+}
